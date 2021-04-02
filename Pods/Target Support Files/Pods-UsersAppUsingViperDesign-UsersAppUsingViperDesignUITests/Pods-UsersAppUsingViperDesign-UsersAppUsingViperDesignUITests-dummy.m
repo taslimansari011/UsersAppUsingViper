@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_UsersAppUsingViperDesign_UsersAppUsingViperDesignUITests : NSObject
+@end
+@implementation PodsDummy_Pods_UsersAppUsingViperDesign_UsersAppUsingViperDesignUITests
+@end
