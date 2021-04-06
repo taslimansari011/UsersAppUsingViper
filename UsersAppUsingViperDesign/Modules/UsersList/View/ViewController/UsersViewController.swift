@@ -3,7 +3,7 @@ import UIKit
 class UsersViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var presenter: UsersListViewToPresenterProtocol! = UsersListPresenter()
+    var presenter: UsersListViewToPresenterProtocol! //= UsersListPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,15 @@ extension UsersViewController: UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension UsersViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let user = presenter.getUser(by: indexPath.row) {
+            presenter.showDetails(of: user, viewController: self)
+        }
     }
 }
 

@@ -30,7 +30,7 @@ protocol UsersListPresenterToViewProtocol {
 }
 
 // PRESENTER of UsersList module will conform to this protocol
-protocol UsersListViewToPresenterProtocol {
+protocol UsersListViewToPresenterProtocol: class {
     var view: UsersListPresenterToViewProtocol? { get set }
     var interactor: UsersListPresenterToInteractorProtocol? { get set }
     var router: UsersListPresenterToRouterProtocol? { get set }
@@ -38,8 +38,11 @@ protocol UsersListViewToPresenterProtocol {
     func updateView()
     func getUsersListCount() -> Int
     func getUser(by index: Int) -> User?
+    func showDetails(of user: User, viewController: UsersViewController)
 }
 
 protocol UsersListPresenterToRouterProtocol {
-    static func createModule() -> UIViewController
+//    var viewController: UsersViewController! { get set }
+    static func createModule() -> UsersViewController
+    func pushToDetails(of user: User, viewController: UsersViewController)
 }

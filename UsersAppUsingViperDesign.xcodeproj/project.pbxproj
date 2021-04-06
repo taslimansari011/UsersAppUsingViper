@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46C986C1261ADAF60083AFF5 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C986BF261ADAF60083AFF5 /* UserDetailsViewController.swift */; };
+		46C986CC261ADDE00083AFF5 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C986CA261ADDE00083AFF5 /* DetailsTableViewCell.swift */; };
+		46C986CD261ADDE00083AFF5 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C986CB261ADDE00083AFF5 /* DetailsTableViewCell.xib */; };
+		46C986D6261AE0840083AFF5 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C986D5261AE0840083AFF5 /* UserDetailsPresenter.swift */; };
+		46C986DF261AE11A0083AFF5 /* UserDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C986DE261AE11A0083AFF5 /* UserDetailsProtocols.swift */; };
+		46C986E4261AE51F0083AFF5 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C986E3261AE51F0083AFF5 /* UserDetailsRouter.swift */; };
 		46CDB93526171F9700534631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDB93426171F9700534631 /* AppDelegate.swift */; };
 		46CDB93726171F9800534631 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDB93626171F9800534631 /* SceneDelegate.swift */; };
 		46CDB93F26171F9800534631 /* UsersAppUsingViperDesign.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46CDB93D26171F9800534631 /* UsersAppUsingViperDesign.xcdatamodeld */; };
@@ -51,6 +57,12 @@
 		0B1B75EBE7379B8FD503CE5B /* Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests.release.xcconfig"; path = "Target Support Files/Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests/Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests.release.xcconfig"; sourceTree = "<group>"; };
 		133B5AE82A88CBCA81528347 /* Pods_UsersAppUsingViperDesignTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsersAppUsingViperDesignTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E69AB73FC2EA10785459C9 /* Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests.debug.xcconfig"; path = "Target Support Files/Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests/Pods-UsersAppUsingViperDesign-UsersAppUsingViperDesignUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46C986BF261ADAF60083AFF5 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		46C986CA261ADDE00083AFF5 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		46C986CB261ADDE00083AFF5 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		46C986D5261AE0840083AFF5 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		46C986DE261AE11A0083AFF5 /* UserDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsProtocols.swift; sourceTree = "<group>"; };
+		46C986E3261AE51F0083AFF5 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
 		46CDB93126171F9700534631 /* UsersAppUsingViperDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersAppUsingViperDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CDB93426171F9700534631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46CDB93626171F9800534631 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +123,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46C986B7261AD9530083AFF5 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				46C986DD261AE1060083AFF5 /* Protocols */,
+				46C986BC261AD9810083AFF5 /* View */,
+				46C986BB261AD9790083AFF5 /* Interactor */,
+				46C986BA261AD96E0083AFF5 /* Presenter */,
+				46C986B8261AD95B0083AFF5 /* Router */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		46C986B8261AD95B0083AFF5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				46C986E3261AE51F0083AFF5 /* UserDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		46C986BA261AD96E0083AFF5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				46C986D5261AE0840083AFF5 /* UserDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		46C986BB261AD9790083AFF5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		46C986BC261AD9810083AFF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46C986C9261ADDC60083AFF5 /* Cells */,
+				46C986BE261ADAE30083AFF5 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46C986BE261ADAE30083AFF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46C986BF261ADAF60083AFF5 /* UserDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46C986C9261ADDC60083AFF5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				46C986CA261ADDE00083AFF5 /* DetailsTableViewCell.swift */,
+				46C986CB261ADDE00083AFF5 /* DetailsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		46C986DD261AE1060083AFF5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				46C986DE261AE11A0083AFF5 /* UserDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		46CDB92826171F9700534631 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +318,7 @@
 		46CDB9762617204800534631 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				46C986B7261AD9530083AFF5 /* UserDetails */,
 				46CDB9772617205800534631 /* UsersList */,
 			);
 			path = Modules;
@@ -399,6 +481,7 @@
 				46CDB94126171F9A00534631 /* Assets.xcassets in Resources */,
 				46CDB9CE26174D0900534631 /* UsersViewController.xib in Resources */,
 				46CDB9AF2617422200534631 /* UsersListTableViewCell.xib in Resources */,
+				46C986CD261ADDE00083AFF5 /* DetailsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,15 +611,20 @@
 			files = (
 				46CDB93F26171F9800534631 /* UsersAppUsingViperDesign.xcdatamodeld in Sources */,
 				46CDB93526171F9700534631 /* AppDelegate.swift in Sources */,
+				46C986CC261ADDE00083AFF5 /* DetailsTableViewCell.swift in Sources */,
 				46CDB9CD26174D0900534631 /* UsersViewController.swift in Sources */,
 				46CDB93726171F9800534631 /* SceneDelegate.swift in Sources */,
 				46CDB9952617245F00534631 /* UsersListProtocols.swift in Sources */,
 				46CDB97D2617209600534631 /* UsersModel.swift in Sources */,
 				46CDB9AE2617422200534631 /* UsersListTableViewCell.swift in Sources */,
+				46C986E4261AE51F0083AFF5 /* UserDetailsRouter.swift in Sources */,
 				46CDB9822617213700534631 /* Constants.swift in Sources */,
 				46CDB9B72617468000534631 /* UsersRouter.swift in Sources */,
+				46C986D6261AE0840083AFF5 /* UserDetailsPresenter.swift in Sources */,
 				46CDB99B2617262C00534631 /* NewsListInteractor.swift in Sources */,
+				46C986C1261ADAF60083AFF5 /* UserDetailsViewController.swift in Sources */,
 				46CDB9A0261728FD00534631 /* NewsListPresenter.swift in Sources */,
+				46C986DF261AE11A0083AFF5 /* UserDetailsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

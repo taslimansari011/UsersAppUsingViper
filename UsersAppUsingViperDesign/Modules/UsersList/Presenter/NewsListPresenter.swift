@@ -24,6 +24,10 @@ class UsersListPresenter: UsersListViewToPresenterProtocol {
     func getUser(by index: Int) -> User? {
         return interactor?.users?[index]
     }
+    
+    func showDetails(of user: User, viewController: UsersViewController) {
+        router?.pushToDetails(of: user, viewController: viewController)
+    }
 }
 
 extension UsersListPresenter: UsersListInteractorToPresenterProtocol {

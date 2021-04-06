@@ -10,24 +10,26 @@ import UIKit
 
 class UsersRouter: UsersListPresenterToRouterProtocol {
     
+//    var viewController: UsersViewController!
+    
     // MARK: - Methods
-    class func createModule() -> UIViewController {
+    static func createModule() -> UsersViewController {
         
-        let view = UsersViewController(nibName: "UsersViewController", bundle: nil)
+        let viewController = UsersViewController(nibName: "UsersViewController", bundle: nil)
         var presenter: UsersListViewToPresenterProtocol & UsersListInteractorToPresenterProtocol = UsersListPresenter()
         var interactor: UsersListPresenterToInteractorProtocol = UsersListInteractor()
         let router: UsersListPresenterToRouterProtocol = UsersRouter()
         
-        view.presenter = presenter
-        presenter.view = view
+        viewController.presenter = presenter
+        presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
         
-        return view
+        return viewController
     }
     
-//    static var mainstoryboard: UIStoryboard {
-//        return UIStoryboard(name:"Main",bundle: Bundle.main)
-//    }
+    func pushToDetails(of user: User, viewController: UsersViewController) {
+        viewController.navigationController?.pushViewController(UserDetailsRouter.createModule(with: user), animated: true)
+    }
 }
